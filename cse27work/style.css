@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background-color: #f3f3f3;
+}
+
+/* HEADER */
+.header {
+  background-color: #131921;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.search-box {
+  display: flex;
+  flex: 1;
+  margin: 0 20px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+}
+
+.search-box button {
+  background: orange;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  gap: 15px;
+}
+
+/* MENU */
+.menu {
+  background-color: #232f3e;
+  padding: 10px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+/* HERO */
+.hero img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+/* PRODUCTS */
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.grid img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.grid p {
+  font-size: 12px;
+  margin-top: 5px;
+}
