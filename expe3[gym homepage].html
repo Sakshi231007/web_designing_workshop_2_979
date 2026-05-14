@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife | Elite Performance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@300;500;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #ff3e3e; /* Energetic Red */
+            --dark: #0a0a0a;
+            --glass: rgba(255, 255, 255, 0.03);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Full Page Background Pattern */
+        .bg-pattern {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)),
+                url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Syncopate', sans-serif;
+            font-size: 1.5rem;
+            color: var(--accent);
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 2.5rem;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+            opacity: 0.7;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { opacity: 1; color: var(--accent); }
+
+        /* Full Height Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .hero-tag {
+            font-size: 0.9rem;
+            color: var(--accent);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 10vw, 6rem);
+            font-weight: 900;
+            line-height: 0.9;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 span {
+            -webkit-text-stroke: 1px white;
+            color: transparent;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: #cc0000;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 62, 62, 0.3);
+        }
+
+        /* Programs Section - Modern Cards */
+        .programs {
+            padding: 5rem 5%;
+            background: #000;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background: #111;
+            padding: 4rem 2rem;
+            border: 1px solid #222;
+            transition: 0.5s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            background: #151515;
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-family: 'Syncopate', sans-serif;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .card-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            font-weight: 900;
+            color: rgba(255,255,255,0.03);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="bg-pattern"></div>
+
+    <nav>
+        <div class="logo">FitLife</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Programs</a>
+            <a href="#">Trainers</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <p class="hero-tag">Limitless Potential</p>
+        <h1>Transform <span>Body</span> & Mind</h1>
+        <div class="cta-group">
+            <a href="#" class="btn btn-primary">Join the Elite</a>
+        </div>
+    </header>
+
+    <section class="programs">
+        <div class="grid">
+            <div class="card">
+                <div class="card-number">01</div>
+                <h3>Strength</h3>
+                <p>Advanced weight training focusing on progressive overload and peak physical power.</p>
+            </div>
+            <div class="card">
+                <div class="card-number">02</div>
+                <h3>Mobility</h3>
+                <p>Yoga and flexibility drills designed for athletes to recover and move without pain.</p>
+            </div>
+            <div class="card">
+                <h3>Nutrition</h3>
+                <div class="card-number">03</div>
+                <p>Precision-engineered diet plans that fuel your specific lifestyle and performance goals.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
